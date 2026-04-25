@@ -1,0 +1,40 @@
+{
+  "heroSlideshow": [
+    "/images/hero2.png",
+    "/images/hero.png",
+    "/images/hero3.png"
+  ],
+  "brideGroom": {
+    "groom": "/images/groom.png",
+    "bride": "/images/bride.png"
+  },
+  "venue": [
+    {
+      "image": "/images/venue.png",
+      "mapUrl": "https://www.google.com/maps?q=16.5206251,81.8698362&z=17&output=embed",
+      "mapLink": "https://www.google.com/maps/place/Krishnabalaji+Conventions+(kancharla's+function+hall)/@16.5207064,81.8705321,17.75z/data=!4m15!1m8!3m7!1s0x3a37e781a72406b1:0x8d8609d32e3692d6!2sKrishnabalaji+Conventions+(kancharla's+function+hall)!8m2!3d16.5206251!4d81.8698362!10e1!16s%2Fg%2F11gf632v7d!3m5!1s0x3a37e781a72406b1:0x8d8609d32e3692d6!8m2!3d16.5206251!4d81.8698362!16s%2Fg%2F11gf632v7d?entry=ttu&g_ep=EgoyMDI2MDQyMi4wIKXMDSoASAFQAw%3D%3D"
+    },
+    {
+      "image": "/images/venue.png",
+      "mapUrl": "https://www.google.com/maps?q=16.5206251,81.8698362&z=17&output=embed",
+      "mapLink": "https://www.google.com/maps/place/Krishnabalaji+Conventions+(kancharla's+function+hall)/@16.5207064,81.8705321,17.75z/data=!4m15!1m8!3m7!1s0x3a37e781a72406b1:0x8d8609d32e3692d6!2sKrishnabalaji+Conventions+(kancharla's+function+hall)!8m2!3d16.5206251!4d81.8698362!10e1!16s%2Fg%2F11gf632v7d!3m5!1s0x3a37e781a72406b1:0x8d8609d32e3692d6!8m2!3d16.5206251!4d81.8698362!16s%2Fg%2F11gf632v7d?entry=ttu&g_ep=EgoyMDI2MDQyMi4wIKXMDSoASAFQAw%3D%3D"
+    }
+  ],
+  "timeline": [
+    "/images/pelli_chupulu.jpeg",
+    "/images/engagement.jpeg",
+    "/images/hero.png"
+  ],
+  "gallery": [
+    { "url": "/images/gallery-1.png", "caption": "" },
+    { "url": "/images/gallery-2.png", "caption": "" },
+    { "url": "/images/gallery-3.png", "caption": "" },
+    { "url": "/images/gallery-4.png", "caption": "" },
+    { "url": "/images/gallery-5.png", "caption": "" },
+    { "url": "/images/gallery-6.png", "caption": "" }
+  ],
+  "presence": {
+    "groomParents": { "url": "/images/groom-parents.png" },
+    "brideParents": { "url": "/images/bride-parents.png" }
+  }
+}

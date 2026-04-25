@@ -1,0 +1,86 @@
+{
+  "common": {
+    "welcome": "The wedding of",
+    "brideGroomLabel": "Bride & Groom",
+    "theBride": "The Bride",
+    "theGroom": "The Groom",
+    "joinUs": "Join us for",
+    "location": "Location",
+    "time": "Time"
+  },
+  "hero": {
+    "title": "Celebrating the Love of",
+    "subtitle": "Join us for our special day"
+  },
+  "brideGroom": {
+    "groom": "Naveen",
+    "bride": "Chandrika",
+    "groomParents": "S/o Komarthy Narasimha Murthy & Sabitha",
+    "brideParents": "D/o Konda Ramakrishna Rao & Varalakshmi"
+  },
+  "venue": {
+    "title": "Venue & Reception",
+    "locations": [
+      {
+        "name": "Marriage Ceremony",
+        "address": "Krishna balaji Convention, Chakalipalem, Konaseema District, Andhra Pradesh",
+        "time": "May 1, 2026 12:30 AM",
+        "button": "View Directions"
+      },
+      {
+        "name": "Wedding Reception",
+        "address": "Krishna balaji Convention, Chakalipalem, Konaseema District, Andhra Pradesh",
+        "time": "April 30, 2026 7:00 PM",
+        "button": "View Directions"
+      }
+    ]
+  },
+  "countdown": {
+    "title": "Countdown to our Big Day",
+    "targetDate": "2026-04-30T11:59:59",
+    "days": "Days",
+    "hours": "Hours",
+    "minutes": "Minutes",
+    "seconds": "Seconds"
+  },
+  "timeline": {
+    "title": "Our Journey",
+    "events": [
+      {
+        "title": "Pellichupulu",
+        "date": "March 13, 2026",
+        "time": "",
+        "description": "Two souls, one destined moment — when we first saw each other in the cherished tradition of Pelli Chupulu, hearts whispered what words couldn't say, planting the seed of a beautiful love story meant to last a lifetime."
+      },
+      {
+        "title": "Engagement",
+        "date": "March 25, 2026",
+        "time": "",
+        "description": "From a shy exchange of glances to a beautiful promise of forever, our engagement is the magical milestone where we exchange rings and intertwine our dreams, sealing our commitment surrounded by the joy and blessings of our beloved family and friends."
+      },
+      {
+        "title": "Wedding Ceremony",
+        "date": "April 30, 2026",
+        "time": "",
+        "description": "The beautiful culmination of our journey arrives as we tie the sacred knot, blending two families, countless smiles, and a million hopes into a perfect symphony of love, ready to walk hand-in-hand into a lifetime of endless togetherness."
+      }
+    ]
+  },
+  "livestream": {
+    "title": "Live Stream",
+    "button": "Join Live"
+  },
+  "gallery": {
+    "title": "Our Memories"
+  },
+  "presence": {
+    "title": "We request the honor of your presence",
+    "brideParents": "Parents of the Bride",
+    "brideParentsNames": "Late Mr. Konda Ramakrishna Rao & Mrs. Varalakshmi",
+    "groomParents": "Parents of the Groom",
+    "groomParentsNames": "Late Mr. Komarthy Narasimha Murthy & Mrs. Sabitha"
+  },
+  "footer": {
+    "copyright": "Made with ❤️ by EventMacha.com"
+  }
+}

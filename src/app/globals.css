@@ -1,0 +1,113 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #D4A857;
+  --color-primary-dark: #B88A3B;
+  --color-primary-light: #F3E1B6;
+
+  --color-candle-light: #FFE6A3;
+  --color-candle-mid: #FFB347;
+  --color-candle-dark: #FF8C1A;
+
+  --color-background-main: #F8F3E8;
+  --color-background-section: #EFE3CF;
+  --color-background-card: #FAF6EE;
+
+  --color-sky-top: #6E8FA3;
+  --color-sky-bottom: #4A6A7F;
+
+  --color-floral-leaf: #8A9A5B;
+  --color-floral-dark-leaf: #5F6F3A;
+  --color-floral-petal: #EED9B7;
+
+  --color-text-primary: #4B3A2F;
+  --color-text-heading: #6E4B2A;
+  --color-text-secondary: #8C7A6B;
+
+  --color-border-base: #EADFC8;
+  --color-border-highlight: #E6C98A;
+  --color-border-shadow: #CBB38A;
+
+  --font-serif: var(--font-serif);
+  --font-sans: var(--font-sans);
+  --font-hero: var(--font-hero);
+  --font-splash: var(--font-splash);
+  --font-telugu: var(--font-telugu);
+}
+
+:root {
+  --background: #F8F3E8;
+  --foreground: #4B3A2F;
+  --card: #FAF6EE;
+  --card-foreground: #4B3A2F;
+  --popover: #FAF6EE;
+  --popover-foreground: #4B3A2F;
+  --primary: #D4A857;
+  --primary-foreground: #FFFFFF;
+  --secondary: #EFE3CF;
+  --secondary-foreground: #4B3A2F;
+  --muted: #EFE3CF;
+  --muted-foreground: #8C7A6B;
+  --accent: #D4A857;
+  --accent-foreground: #FFFFFF;
+  --border: #EADFC8;
+  --input: #EADFC8;
+  --ring: #D4A857;
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+  body {
+    @apply bg-background-main text-text-primary font-sans;
+    background-image: radial-gradient(circle at 50% 50%, rgba(212, 168, 87, 0.05) 0%, transparent 100%);
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+.ornate-border {
+  border: 4px double var(--color-primary);
+  padding: 1rem;
+  position: relative;
+}
+
+.ornate-border::before,
+.ornate-border::after {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border: 2px solid var(--color-primary);
+}
+
+.ornate-border::before { top: -10px; left: -10px; border-right: 0; border-bottom: 0; }
+.ornate-border::after { bottom: -10px; right: -10px; border-left: 0; border-top: 0; }
+
+.floral-divider {
+  @apply flex items-center justify-center my-8 opacity-60;
+}
+
+.floral-divider::before,
+.floral-divider::after {
+  content: '';
+  @apply h-[1px] w-full bg-primary mx-4;
+}
+
+/* Custom scrollbar for premium feel */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-background-main);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary-dark);
+}
