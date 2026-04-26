@@ -5,14 +5,6 @@ import { usePathname } from 'next/navigation';
 import { Globe, Menu, X } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
-const NAV_LINKS = [
-  { label: 'Couple',   href: '#couple' },
-  { label: 'Venue',    href: '#venue' },
-  { label: 'Timeline', href: '#timeline' },
-  { label: 'Gallery',  href: '#gallery' },
-  { label: 'RSVP',     href: '#presence' },
-];
-
 export default function Header({ lang, translations }: { lang: string; translations: any }) {
   const pathname = usePathname();
   const nextLang = lang === 'en' ? 'te' : 'en';
@@ -35,6 +27,15 @@ export default function Header({ lang, translations }: { lang: string; translati
 
   const groomInitial = translations?.brideGroom?.groom ? Array.from(translations.brideGroom.groom as string)[0] : 'A';
   const brideInitial = translations?.brideGroom?.bride ? Array.from(translations.brideGroom.bride as string)[0] : 'B';
+
+  const nav = translations?.common?.nav || {};
+  const NAV_LINKS = [
+    { label: nav.couple   || 'Couple',   href: '#couple' },
+    { label: nav.venue    || 'Venue',    href: '#venue' },
+    { label: nav.timeline || 'Timeline', href: '#timeline' },
+    { label: nav.gallery  || 'Gallery',  href: '#gallery' },
+    { label: nav.live     || 'Live',     href: '#livestream' },
+  ];
 
   return (
     <header
@@ -82,7 +83,14 @@ export default function Header({ lang, translations }: { lang: string; translati
         <div className="flex md:hidden items-center gap-3">
           <Link
             href={newPath}
-            className="flex items-center gap-1 text-xs text-text-secondary hover:text-primary border border-primary/30 rounded-full px-2.5 py-1"
+            className="flex items-center gap-1.5 text-xs font-semibold border rounded-full px-3 py-1.5 transition-all shadow-sm"
+            style={{
+              background: 'rgba(250,240,220,0.95)',
+              borderColor: 'rgba(212,168,87,0.6)',
+              color: '#B88A3B',
+              backdropFilter: 'blur(8px)',
+              boxShadow: '0 2px 8px rgba(212,168,87,0.2)',
+            }}
           >
             <Globe className="w-3 h-3" />
             <span className={lang === 'te' ? 'font-telugu' : 'font-sans'}>
@@ -91,10 +99,16 @@ export default function Header({ lang, translations }: { lang: string; translati
           </Link>
           <button
             onClick={() => setMenuOpen((v) => !v)}
-            className="text-text-primary p-1"
+            className="p-1.5 rounded-full transition-all"
+            style={{
+              background: 'rgba(250,240,220,0.95)',
+              border: '1px solid rgba(212,168,87,0.5)',
+              color: '#B88A3B',
+              backdropFilter: 'blur(8px)',
+            }}
             aria-label="Toggle menu"
           >
-            {menuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+            {menuOpen ? <X className="w-4 h-4" /> : <Menu className="w-4 h-4" />}
           </button>
         </div>
       </div>

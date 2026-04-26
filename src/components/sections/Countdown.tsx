@@ -35,7 +35,7 @@ export default function Countdown({ translations }: CountdownProps) {
   }, [translations.countdown.targetDate]);
 
   return (
-    <section className="py-12 md:py-24 bg-[#FDFBF7] relative overflow-hidden">
+    <section className="py-8 md:py-24 bg-[#FDFBF7] relative overflow-hidden">
       
       {/* Decorative flowers */}
       <div className="absolute top-0 right-0 w-48 h-48 opacity-[0.07] pointer-events-none">
@@ -72,32 +72,30 @@ export default function Countdown({ translations }: CountdownProps) {
           </div>
 
           {/* Countdown Timer */}
-          <div className="flex justify-center items-center gap-3 sm:gap-6 md:gap-10 max-w-4xl mx-auto">
+          <div className="flex justify-center items-center gap-1.5 sm:gap-4 md:gap-8 max-w-4xl mx-auto">
             <TimeUnit value={timeLeft.days} label={translations.countdown.days} />
             
             {/* Separator */}
-            <div className="flex flex-col gap-2 md:gap-4 pb-8 md:pb-12 opacity-60">
-              <div className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-[#D4A857]" />
-              <div className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-[#D4A857]" />
+            <div className="flex flex-col gap-1.5 md:gap-3 pb-8 md:pb-12">
+              <div className="w-1 h-1 md:w-2 md:h-2 rounded-full bg-[#D4A857] shadow-[0_0_6px_rgba(212,168,87,0.8)]" />
+              <div className="w-1 h-1 md:w-2 md:h-2 rounded-full bg-[#D4A857] shadow-[0_0_6px_rgba(212,168,87,0.8)]" />
             </div>
             
             <TimeUnit value={timeLeft.hours} label={translations.countdown.hours} />
             
-            <div className="flex flex-col gap-2 md:gap-4 pb-8 md:pb-12 opacity-60">
-              <div className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-[#D4A857]" />
-              <div className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-[#D4A857]" />
+            <div className="flex flex-col gap-1.5 md:gap-3 pb-8 md:pb-12">
+              <div className="w-1 h-1 md:w-2 md:h-2 rounded-full bg-[#D4A857] shadow-[0_0_6px_rgba(212,168,87,0.8)]" />
+              <div className="w-1 h-1 md:w-2 md:h-2 rounded-full bg-[#D4A857] shadow-[0_0_6px_rgba(212,168,87,0.8)]" />
             </div>
             
             <TimeUnit value={timeLeft.minutes} label={translations.countdown.minutes} />
             
-            <div className="flex flex-col gap-2 md:gap-4 pb-8 md:pb-12 opacity-60 hidden sm:flex">
-              <div className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-[#D4A857]" />
-              <div className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-[#D4A857]" />
+            <div className="flex flex-col gap-1.5 md:gap-3 pb-8 md:pb-12">
+              <div className="w-1 h-1 md:w-2 md:h-2 rounded-full bg-[#D4A857] shadow-[0_0_6px_rgba(212,168,87,0.8)]" />
+              <div className="w-1 h-1 md:w-2 md:h-2 rounded-full bg-[#D4A857] shadow-[0_0_6px_rgba(212,168,87,0.8)]" />
             </div>
             
-            <div className="hidden sm:block">
-              <TimeUnit value={timeLeft.seconds} label={translations.countdown.seconds} />
-            </div>
+            <TimeUnit value={timeLeft.seconds} label={translations.countdown.seconds} />
           </div>
         </motion.div>
       </div>
@@ -108,22 +106,47 @@ export default function Countdown({ translations }: CountdownProps) {
 function TimeUnit({ value, label }: { value: number; label: string }) {
   return (
     <div className="flex flex-col items-center">
-      <div 
-        className="relative w-16 h-20 sm:w-20 sm:h-24 md:w-28 md:h-32 rounded-t-[40%] rounded-b-[15%] shadow-lg flex flex-col items-center justify-center mb-4 sm:mb-6 transition-transform hover:-translate-y-1 overflow-hidden"
+      {/* Outer glow ring */}
+      <div
+        className="relative flex items-center justify-center mb-4 sm:mb-6 transition-transform duration-300 hover:-translate-y-1"
         style={{
-          background: 'linear-gradient(145deg, #FFFFFF, #FAF0DC)',
-          border: '1px solid rgba(230,201,138,0.5)',
-          boxShadow: '0 10px 30px -5px rgba(212,168,87,0.15), inset 0 2px 5px rgba(255,255,255,0.8)'
+          width: 'clamp(60px, 16vw, 112px)',
+          height: 'clamp(74px, 20vw, 128px)',
         }}
       >
-        {/* Inner subtle gold line */}
-        <div className="absolute inset-1 rounded-t-[40%] rounded-b-[15%] border border-[#D4A857]/20 pointer-events-none" />
-        
-        <span className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-text-heading font-serif tracking-tight drop-shadow-sm z-10">
-          {value.toString().padStart(2, '0')}
-        </span>
+        {/* Animated outer glow border */}
+        <div
+          className="absolute inset-0 rounded-t-[50%] rounded-b-[18%] animate-pulse"
+          style={{
+            background: 'linear-gradient(145deg, #E6C98A, #D4A857 35%, #B88A3B 65%, #E6C98A)',
+            padding: '2px',
+            boxShadow: '0 0 18px 4px rgba(212,168,87,0.35), 0 8px 24px rgba(180,130,50,0.25)',
+          }}
+        >
+          <div className="w-full h-full rounded-t-[48%] rounded-b-[15%] bg-transparent" />
+        </div>
+
+        {/* Main tile */}
+        <div
+          className="absolute inset-[2px] rounded-t-[48%] rounded-b-[15%] flex flex-col items-center justify-center overflow-hidden"
+          style={{
+            background: 'linear-gradient(160deg, #FFFDF7 0%, #FAF0DC 55%, #F5E6C8 100%)',
+            boxShadow: 'inset 0 2px 8px rgba(255,255,255,0.9), inset 0 -2px 6px rgba(180,130,50,0.12)',
+          }}
+        >
+          {/* Top shimmer highlight */}
+          <div className="absolute top-0 left-0 right-0 h-1/3 bg-gradient-to-b from-white/60 to-transparent pointer-events-none rounded-t-[48%]" />
+          {/* Inner gold border */}
+          <div
+            className="absolute inset-[4px] rounded-t-[46%] rounded-b-[12%] pointer-events-none"
+            style={{ border: '1px solid rgba(212,168,87,0.30)' }}
+          />
+          <span className="text-[1.55rem] sm:text-4xl md:text-5xl text-text-heading font-serif tracking-tight drop-shadow-sm z-10 relative">
+            {value.toString().padStart(2, '0')}
+          </span>
+        </div>
       </div>
-      <span className="text-[8px] sm:text-[10px] md:text-xs text-[#B88A3B] font-bold uppercase tracking-[0.2em] sm:tracking-[0.3em]">
+      <span className="text-[7px] sm:text-[10px] md:text-xs text-[#B88A3B] font-bold uppercase tracking-[0.18em] sm:tracking-[0.3em]">
         {label}
       </span>
     </div>

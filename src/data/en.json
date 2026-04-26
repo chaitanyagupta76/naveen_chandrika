@@ -6,7 +6,16 @@
     "theGroom": "The Groom",
     "joinUs": "Join us for",
     "location": "Location",
-    "time": "Time"
+    "time": "Time",
+    "sumuhurtham": "Sumuhurtham",
+    "dinnerReception": "Dinner & Reception",
+    "nav": {
+      "couple": "Couple",
+      "venue": "Venue",
+      "timeline": "Our Journey",
+      "gallery": "Gallery",
+      "live": "Live"
+    }
   },
   "hero": {
     "title": "Two Hearts, One Journey",
@@ -68,19 +77,22 @@
   },
   "livestream": {
     "title": "Live Stream",
-    "button": "Join Live"
+    "message": "Live starts on April 30, 2026 from 6PM",
+    "button": "Join Live",
+    "joinButton": "Join us online"
   },
   "gallery": {
-    "title": "Our Memories"
+    "title": "Moments We Cherish"
   },
   "presence": {
-    "title": "We request the honor of your presence",
+    "title": "Under the verdant canopy.. amidst the fragrance of mango leaves.. To the soulful rhythm of Nadaswaram.. and the sacred vows of three knots.. As our children unite in the presence of Vedic hymns. We cordially seek your presence and blessings to grace this ceremony.",
     "brideParents": "Parents of the Bride",
     "brideParentsNames": "Late Mr. Konda Ramakrishna Rao & Mrs. Varalakshmi",
     "groomParents": "Parents of the Groom",
-    "groomParentsNames": "Late Mr. Komarthy Narasimha Murthy & Mrs. Sabitha"
+    "groomParentsNames": "Late Mr. Komarthy Narasimha Murthy & Mrs. Sabitha",
+    "blessings": "With Blessings Of"
   },
   "footer": {
-    "copyright": "Made with ❤️ by EventMacha.com"
+    "copyright": "Made with ❤️ for Naveen & Chandrika by EventMacha.com"
   }
 }

@@ -49,7 +49,7 @@ export default function Gallery({ translations, images }: GalleryProps) {
   }, [selectedIndex, isAutoplay, handleNext]);
 
   return (
-    <section className="py-12 md:py-24 bg-[#FDFBF7] relative overflow-hidden" id="gallery">
+    <section className="py-8 md:py-24 bg-[#FDFBF7] relative overflow-hidden" id="gallery">
       
       {/* Decorative flowers */}
       <div className="absolute top-10 right-10 w-40 h-40 opacity-[0.05] pointer-events-none">

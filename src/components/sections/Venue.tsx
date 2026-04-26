@@ -14,7 +14,7 @@ export default function Venue({ translations, images }: VenueProps) {
   const venueImages = images.venue || [];
 
   return (
-    <section className="py-12 md:py-24 bg-[#FDFBF7] relative overflow-hidden" id="venue">
+    <section className="py-8 md:py-24 bg-[#FDFBF7] relative overflow-hidden" id="venue">
 
       {/* Decorative floral watermark */}
       <div className="absolute top-0 right-0 w-64 h-64 opacity-[0.05] pointer-events-none">
@@ -95,35 +95,40 @@ export default function Venue({ translations, images }: VenueProps) {
                 {/* Content Section */}
                 <div className="flex flex-col flex-1 p-5 sm:p-8 lg:p-10">
 
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 mb-6 sm:mb-8">
+                  {/* Location & Time — full width, prominent on mobile */}
+                  <div className="flex flex-col gap-5 sm:gap-6 mb-6 sm:mb-8">
                     {/* Location */}
-                    <div className="flex flex-row items-center text-left gap-4">
-                      <div className="w-10 h-10 rounded-full bg-[#FAF0DC] flex items-center justify-center border border-[#E6C98A]/40 shadow-sm shrink-0">
-                        <MapPin className="w-4 h-4 text-[#B88A3B]" />
+                    <div className="flex flex-row items-start text-left gap-4">
+                      <div className="w-11 h-11 rounded-full bg-[#FAF0DC] flex items-center justify-center border border-[#E6C98A]/40 shadow-sm shrink-0 mt-0.5">
+                        <MapPin className="w-5 h-5 text-[#B88A3B]" />
                       </div>
                       <div>
-                        <p className="font-sans text-[10px] tracking-[0.2em] uppercase text-[#B88A3B] font-semibold mb-2">{translations.common?.location || 'Location'}</p>
-                        <p className="text-text-secondary text-sm leading-relaxed max-w-[200px]">{venue.address}</p>
+                        <p className="font-sans text-[10px] tracking-[0.2em] uppercase text-[#B88A3B] font-semibold mb-1.5">{translations.common?.location || 'Location'}</p>
+                        <p className="text-text-secondary text-sm sm:text-base leading-relaxed">{venue.address}</p>
                       </div>
                     </div>
 
-                    {/* Time */}
-                    <div className="flex flex-row items-center text-left gap-4">
-                      <div className="w-10 h-10 rounded-full bg-[#FAF0DC] flex items-center justify-center border border-[#E6C98A]/40 shadow-sm shrink-0">
-                        <Clock className="w-4 h-4 text-[#B88A3B]" />
+                    {/* Time — per-venue label */}
+                    <div className="flex flex-row items-start text-left gap-4">
+                      <div className="w-11 h-11 rounded-full bg-[#FAF0DC] flex items-center justify-center border border-[#E6C98A]/40 shadow-sm shrink-0 mt-0.5">
+                        <Clock className="w-5 h-5 text-[#B88A3B]" />
                       </div>
                       <div>
-                        <p className="font-sans text-[10px] tracking-[0.2em] uppercase text-[#B88A3B] font-semibold mb-2">{translations.common?.time || 'Time'}</p>
-                        <p className="text-text-secondary text-sm leading-relaxed">{venue.time}</p>
+                        <p className="font-sans text-[10px] tracking-[0.2em] uppercase text-[#B88A3B] font-semibold mb-1.5">
+                          {index === 0
+                            ? (translations.common?.sumuhurtham || 'Sumuhurtham')
+                            : (translations.common?.dinnerReception || 'Dinner & Reception')}
+                        </p>
+                        <p className="text-text-secondary text-sm sm:text-base leading-relaxed font-medium">{venue.time}</p>
                       </div>
                     </div>
                   </div>
 
                   {/* Gold Divider */}
-                  <div className="w-full h-px mb-8" style={{ background: 'linear-gradient(to right, transparent, #E6C98A, transparent)' }} />
+                  <div className="w-full h-px mb-6 sm:mb-8" style={{ background: 'linear-gradient(to right, transparent, #E6C98A, transparent)' }} />
 
-                  {/* Map Preview */}
-                  <div className="aspect-[21/9] w-full rounded-xl overflow-hidden border border-[#E6C98A]/20 shadow-inner mb-8 shrink-0 relative group/map bg-gray-100">
+                  {/* Map Preview — hidden on mobile, visible on md+ */}
+                  <div className="hidden md:block aspect-[21/9] w-full rounded-xl overflow-hidden border border-[#E6C98A]/20 shadow-inner mb-8 shrink-0 relative group/map bg-gray-100">
                     <iframe
                       src={images.venue[index]?.mapUrl || (Array.isArray(images.venue) ? images.venue[0]?.mapUrl : images.venue.mapUrl)}
                       width="100%"

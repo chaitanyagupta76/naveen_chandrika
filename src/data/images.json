@@ -22,19 +22,23 @@
   ],
   "timeline": [
     "/images/pelli_chupulu.jpeg",
-    "/images/engagement.jpeg",
+    "/images/engagement_2.jpeg",
     "/images/hero.png"
   ],
   "gallery": [
     { "url": "/images/gallery-1.png", "caption": "" },
     { "url": "/images/gallery-2.png", "caption": "" },
     { "url": "/images/gallery-3.png", "caption": "" },
+    { "url": "/images/gallery_4.png", "caption": "" },
+    { "url": "/images/gallery_41.jpeg", "caption": "" },
     { "url": "/images/gallery-4.png", "caption": "" },
     { "url": "/images/gallery-5.png", "caption": "" },
-    { "url": "/images/gallery-6.png", "caption": "" }
+    { "url": "/images/gallery-6.png", "caption": "" },
+    { "url": "/images/gallery-7.png", "caption": "" }
   ],
   "presence": {
     "groomParents": { "url": "/images/groom-parents.png" },
     "brideParents": { "url": "/images/bride-parents.png" }
-  }
+  },
+  "livestreamUrl": "https://www.youtube.com/embed/pFnZ_zg9h9s"
 }
