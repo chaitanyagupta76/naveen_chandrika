@@ -146,6 +146,10 @@ export default function Splash({ translations, onFinish }: SplashProps) {
     const timer = setTimeout(() => {
       setIsVisible(false);
       document.body.style.overflow = '';
+
+      // Signal other components (e.g. MusicPlayer) that splash is done
+      window.dispatchEvent(new CustomEvent('splashDone'));
+
       if (onFinish) {
         setTimeout(onFinish, 1000); // Wait for fade out animation before unmounting
       }
@@ -159,6 +163,13 @@ export default function Splash({ translations, onFinish }: SplashProps) {
 
   const groomName = translations.brideGroom?.groom;
   const brideName = translations.brideGroom?.bride;
+
+  const [isMounted, setIsMounted] = useState(false);
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  if (!isMounted) return null;
 
   return (
     <AnimatePresence>
@@ -349,12 +360,12 @@ export default function Splash({ translations, onFinish }: SplashProps) {
           </motion.div>
 
           {/* ── Shimmer CSS animation (embedded keyframes) ─────────── */}
-          <style jsx global>{`
+          <style dangerouslySetInnerHTML={{ __html: `
             @keyframes splash-shimmer {
               0%, 100% { opacity: 0.6; }
               50% { opacity: 1; }
             }
-          `}</style>
+          `}} />
         </motion.div>
       )}
     </AnimatePresence>

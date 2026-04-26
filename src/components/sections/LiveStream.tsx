@@ -126,6 +126,11 @@ export default function LiveStream({ translations, images }: LiveStreamProps) {
             href={images.livestreamUrl?.replace('/embed/', '/watch?v=') || '#'}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => {
+              if (typeof window !== 'undefined') {
+                window.dispatchEvent(new CustomEvent('pauseBgm'));
+              }
+            }}
             className="mt-4 px-10 md:px-14 py-3 md:py-4 rounded-full font-sans font-bold text-sm md:text-base uppercase tracking-[0.2em] transition-all duration-300 hover:scale-105 active:scale-95 inline-block"
             style={{
               background: 'linear-gradient(135deg, #E6C98A 0%, #D4A857 50%, #B88A3B 100%)',

@@ -2,6 +2,7 @@ import { getTranslations, getConfig, getImages } from '@/lib/fetchData';
 import Header from '@/components/common/Header';
 import Splash from '@/components/common/Splash';
 import FallingLights from '@/components/common/FallingLights';
+import MusicPlayer from '@/components/common/MusicPlayer';
 import Footer from '@/components/common/Footer';
 import Hero from '@/components/sections/Hero';
 import BrideGroom from '@/components/sections/BrideGroom';
@@ -30,6 +31,7 @@ export default async function WeddingPage({
     <main className="min-h-screen bg-background-main">
       <FallingLights />
       <Splash translations={translations} />
+      <MusicPlayer />
       <Header lang={lang} translations={translations} />
       
       {sections.hero && (
