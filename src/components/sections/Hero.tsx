@@ -19,13 +19,13 @@ function FloralCrown() {
   return (
     <svg viewBox="0 0 160 90" fill="none" className="w-full h-full">
       {/* Petals around central circle */}
-      {[0,45,90,135,180,225,270,315].map((angle, i) => {
+      {[0, 45, 90, 135, 180, 225, 270, 315].map((angle, i) => {
         const r = (angle * Math.PI) / 180;
         return (
           <ellipse key={i}
             cx={80 + Math.cos(r) * 18} cy={46 + Math.sin(r) * 18}
             rx="7" ry="5"
-            transform={`rotate(${angle} ${80 + Math.cos(r)*18} ${46 + Math.sin(r)*18})`}
+            transform={`rotate(${angle} ${80 + Math.cos(r) * 18} ${46 + Math.sin(r) * 18})`}
             fill="#D4A857" opacity="0.8"
           />
         );
@@ -35,21 +35,21 @@ function FloralCrown() {
       <circle cx="80" cy="46" r="6.5" fill="#F3E1B6" />
       <circle cx="80" cy="46" r="3" fill="#D4A857" />
       {/* Left sprigs */}
-      <path d="M64 46 Q48 32 28 24" stroke="#8A9A5B" strokeWidth="2" strokeLinecap="round" fill="none"/>
-      <path d="M60 42 Q46 40 30 36" stroke="#8A9A5B" strokeWidth="1.5" strokeLinecap="round" fill="none"/>
-      <ellipse cx="26" cy="23" rx="9" ry="5" transform="rotate(-35 26 23)" fill="#8A9A5B" opacity="0.75"/>
-      <ellipse cx="28" cy="35" rx="8" ry="4" transform="rotate(-10 28 35)" fill="#8A9A5B" opacity="0.6"/>
-      <circle cx="16" cy="20" r="5" fill="#D4A857" opacity="0.7"/>
+      <path d="M64 46 Q48 32 28 24" stroke="#8A9A5B" strokeWidth="2" strokeLinecap="round" fill="none" />
+      <path d="M60 42 Q46 40 30 36" stroke="#8A9A5B" strokeWidth="1.5" strokeLinecap="round" fill="none" />
+      <ellipse cx="26" cy="23" rx="9" ry="5" transform="rotate(-35 26 23)" fill="#8A9A5B" opacity="0.75" />
+      <ellipse cx="28" cy="35" rx="8" ry="4" transform="rotate(-10 28 35)" fill="#8A9A5B" opacity="0.6" />
+      <circle cx="16" cy="20" r="5" fill="#D4A857" opacity="0.7" />
       {/* Left scroll */}
-      <path d="M58 46 Q48 58 40 63 Q34 66 32 62" stroke="#D4A857" strokeWidth="1.5" fill="none" strokeLinecap="round"/>
+      <path d="M58 46 Q48 58 40 63 Q34 66 32 62" stroke="#D4A857" strokeWidth="1.5" fill="none" strokeLinecap="round" />
       {/* Right sprigs */}
-      <path d="M96 46 Q112 32 132 24" stroke="#8A9A5B" strokeWidth="2" strokeLinecap="round" fill="none"/>
-      <path d="M100 42 Q114 40 130 36" stroke="#8A9A5B" strokeWidth="1.5" strokeLinecap="round" fill="none"/>
-      <ellipse cx="134" cy="23" rx="9" ry="5" transform="rotate(35 134 23)" fill="#8A9A5B" opacity="0.75"/>
-      <ellipse cx="132" cy="35" rx="8" ry="4" transform="rotate(10 132 35)" fill="#8A9A5B" opacity="0.6"/>
-      <circle cx="144" cy="20" r="5" fill="#D4A857" opacity="0.7"/>
+      <path d="M96 46 Q112 32 132 24" stroke="#8A9A5B" strokeWidth="2" strokeLinecap="round" fill="none" />
+      <path d="M100 42 Q114 40 130 36" stroke="#8A9A5B" strokeWidth="1.5" strokeLinecap="round" fill="none" />
+      <ellipse cx="134" cy="23" rx="9" ry="5" transform="rotate(35 134 23)" fill="#8A9A5B" opacity="0.75" />
+      <ellipse cx="132" cy="35" rx="8" ry="4" transform="rotate(10 132 35)" fill="#8A9A5B" opacity="0.6" />
+      <circle cx="144" cy="20" r="5" fill="#D4A857" opacity="0.7" />
       {/* Right scroll */}
-      <path d="M102 46 Q112 58 120 63 Q126 66 128 62" stroke="#D4A857" strokeWidth="1.5" fill="none" strokeLinecap="round"/>
+      <path d="M102 46 Q112 58 120 63 Q126 66 128 62" stroke="#D4A857" strokeWidth="1.5" fill="none" strokeLinecap="round" />
     </svg>
   );
 }
@@ -58,9 +58,9 @@ function Corner({ rotate = 0 }: { rotate?: number }) {
   return (
     <svg viewBox="0 0 36 36" fill="none" className="w-full h-full"
       style={{ transform: `rotate(${rotate}deg)` }}>
-      <path d="M3 33 L3 10 Q3 3 10 3 L33 3" stroke="#D4A857" strokeWidth="2.5" strokeLinecap="round" fill="none"/>
-      <path d="M3 33 L3 14 Q3 7 10 7 L33 7" stroke="#D4A857" strokeWidth="1" strokeLinecap="round" fill="none" opacity="0.5"/>
-      <circle cx="4.5" cy="4.5" r="3.5" fill="#D4A857"/>
+      <path d="M3 33 L3 10 Q3 3 10 3 L33 3" stroke="#D4A857" strokeWidth="2.5" strokeLinecap="round" fill="none" />
+      <path d="M3 33 L3 14 Q3 7 10 7 L33 7" stroke="#D4A857" strokeWidth="1" strokeLinecap="round" fill="none" opacity="0.5" />
+      <circle cx="4.5" cy="4.5" r="3.5" fill="#D4A857" />
     </svg>
   );
 }
@@ -140,18 +140,18 @@ function SkyLantern({ size = 48, uid }: { size?: number; uid: string }) {
       <line x1="24" y1="0" x2="24" y2="8" stroke="#BE5E0A" strokeWidth="1.5" strokeLinecap="round" />
       <defs>
         <radialGradient id={`og${id}`} cx="50%" cy="50%" r="55%">
-          <stop offset="0%"   stopColor="#FFD060" stopOpacity="0.55" />
-          <stop offset="70%"  stopColor="#FF8C1A" stopOpacity="0.15" />
+          <stop offset="0%" stopColor="#FFD060" stopOpacity="0.55" />
+          <stop offset="70%" stopColor="#FF8C1A" stopOpacity="0.15" />
           <stop offset="100%" stopColor="#FF6600" stopOpacity="0" />
         </radialGradient>
         <linearGradient id={`body${id}`} x1="7" y1="12" x2="41" y2="58" gradientUnits="userSpaceOnUse">
-          <stop offset="0%"   stopColor="#FFC14D" />
-          <stop offset="50%"  stopColor="#FF8C1A" />
+          <stop offset="0%" stopColor="#FFC14D" />
+          <stop offset="50%" stopColor="#FF8C1A" />
           <stop offset="100%" stopColor="#C85A00" />
         </linearGradient>
         <radialGradient id={`inner${id}`} cx="50%" cy="45%" r="60%">
-          <stop offset="0%"   stopColor="#FFF0B0" stopOpacity="1" />
-          <stop offset="50%"  stopColor="#FFD060" stopOpacity="0.8" />
+          <stop offset="0%" stopColor="#FFF0B0" stopOpacity="1" />
+          <stop offset="50%" stopColor="#FFD060" stopOpacity="0.8" />
           <stop offset="100%" stopColor="#FFAA33" stopOpacity="0.3" />
         </radialGradient>
       </defs>
@@ -167,22 +167,22 @@ interface LanternConfig {
 }
 
 const LANTERNS: LanternConfig[] = [
-  { size: 100, style: { left: '-1%',  top: '12%' }, animate: { y:[0,-22,0], rotate:[-5,5,-5],  opacity:[0.85,1,0.85] }, transition:{ duration:7,   delay:0,   repeat:Infinity, ease:'easeInOut' } },
-  { size: 76,  style: { left: '4%',   top: '42%' }, animate: { y:[0,-18,0], rotate:[-4,4,-4],  opacity:[0.8,1,0.8]   }, transition:{ duration:8.5, delay:1.2, repeat:Infinity, ease:'easeInOut' } },
-  { size: 56,  style: { left: '2%',   top: '68%' }, animate: { y:[0,-14,0], rotate:[-3,3,-3],  opacity:[0.75,1,0.75] }, transition:{ duration:6.5, delay:0.4, repeat:Infinity, ease:'easeInOut' } },
-  { size: 44,  style: { left: '10%',  top: '28%' }, animate: { y:[0,-12,0], rotate:[-3,2,-3],  opacity:[0.7,0.9,0.7] }, transition:{ duration:7.5, delay:2.1, repeat:Infinity, ease:'easeInOut' } },
-  { size: 32,  style: { left: '14%',  top: '6%'  }, animate: { y:[0,-10,0], rotate:[-2,2,-2],  opacity:[0.6,0.85,0.6]}, transition:{ duration:9,   delay:1.5, repeat:Infinity, ease:'easeInOut' } },
-  { size: 26,  style: { left: '18%',  top: '54%' }, animate: { y:[0,-8,0],  rotate:[-2,2,-2],  opacity:[0.55,0.8,0.55]},transition:{ duration:7,   delay:3,   repeat:Infinity, ease:'easeInOut' } },
-  { size: 88,  style: { right:'-1%',  top: '8%'  }, animate: { y:[0,-20,0], rotate:[5,-5,5],   opacity:[0.9,1,0.9]   }, transition:{ duration:8,   delay:0.7, repeat:Infinity, ease:'easeInOut' } },
-  { size: 70,  style: { right:'3%',   top: '38%' }, animate: { y:[0,-16,0], rotate:[4,-4,4],   opacity:[0.8,1,0.8]   }, transition:{ duration:9,   delay:1.8, repeat:Infinity, ease:'easeInOut' } },
-  { size: 50,  style: { right:'1%',   top: '65%' }, animate: { y:[0,-13,0], rotate:[3,-3,3],   opacity:[0.75,0.95,0.75]},transition:{ duration:6,  delay:0.2, repeat:Infinity, ease:'easeInOut' } },
-  { size: 38,  style: { right:'9%',   top: '22%' }, animate: { y:[0,-11,0], rotate:[2,-2,2],   opacity:[0.65,0.9,0.65]},transition:{ duration:7,  delay:2.5, repeat:Infinity, ease:'easeInOut' } },
-  { size: 28,  style: { right:'16%',  top: '4%'  }, animate: { y:[0,-9,0],  rotate:[2,-2,2],   opacity:[0.6,0.8,0.6] }, transition:{ duration:8.5, delay:1,   repeat:Infinity, ease:'easeInOut' } },
-  { size: 22,  style: { right:'20%',  top: '58%' }, animate: { y:[0,-7,0],  rotate:[1,-1,1],   opacity:[0.5,0.75,0.5]}, transition:{ duration:7,  delay:3.5, repeat:Infinity, ease:'easeInOut' } },
-  { size: 18,  style: { left:'30%',   top: '3%'  }, animate: { y:[0,-6,0],  opacity:[0.4,0.65,0.4] },                    transition:{ duration:6,   delay:0.5, repeat:Infinity, ease:'easeInOut' } },
-  { size: 16,  style: { left:'42%',   top: '88%' }, animate: { y:[0,-5,0],  opacity:[0.4,0.6,0.4]  },                    transition:{ duration:7.5, delay:2,   repeat:Infinity, ease:'easeInOut' } },
-  { size: 20,  style: { right:'32%',  top: '2%'  }, animate: { y:[0,-6,0],  opacity:[0.45,0.65,0.45]},                   transition:{ duration:8,   delay:1.2, repeat:Infinity, ease:'easeInOut' } },
-  { size: 14,  style: { right:'40%',  top: '92%' }, animate: { y:[0,-5,0],  opacity:[0.35,0.55,0.35]},                   transition:{ duration:6.5, delay:0.8, repeat:Infinity, ease:'easeInOut' } },
+  { size: 100, style: { left: '-1%', top: '12%' }, animate: { y: [0, -22, 0], rotate: [-5, 5, -5], opacity: [0.85, 1, 0.85] }, transition: { duration: 7, delay: 0, repeat: Infinity, ease: 'easeInOut' } },
+  { size: 76, style: { left: '4%', top: '42%' }, animate: { y: [0, -18, 0], rotate: [-4, 4, -4], opacity: [0.8, 1, 0.8] }, transition: { duration: 8.5, delay: 1.2, repeat: Infinity, ease: 'easeInOut' } },
+  { size: 56, style: { left: '2%', top: '68%' }, animate: { y: [0, -14, 0], rotate: [-3, 3, -3], opacity: [0.75, 1, 0.75] }, transition: { duration: 6.5, delay: 0.4, repeat: Infinity, ease: 'easeInOut' } },
+  { size: 44, style: { left: '10%', top: '28%' }, animate: { y: [0, -12, 0], rotate: [-3, 2, -3], opacity: [0.7, 0.9, 0.7] }, transition: { duration: 7.5, delay: 2.1, repeat: Infinity, ease: 'easeInOut' } },
+  { size: 32, style: { left: '14%', top: '6%' }, animate: { y: [0, -10, 0], rotate: [-2, 2, -2], opacity: [0.6, 0.85, 0.6] }, transition: { duration: 9, delay: 1.5, repeat: Infinity, ease: 'easeInOut' } },
+  { size: 26, style: { left: '18%', top: '54%' }, animate: { y: [0, -8, 0], rotate: [-2, 2, -2], opacity: [0.55, 0.8, 0.55] }, transition: { duration: 7, delay: 3, repeat: Infinity, ease: 'easeInOut' } },
+  { size: 88, style: { right: '-1%', top: '8%' }, animate: { y: [0, -20, 0], rotate: [5, -5, 5], opacity: [0.9, 1, 0.9] }, transition: { duration: 8, delay: 0.7, repeat: Infinity, ease: 'easeInOut' } },
+  { size: 70, style: { right: '3%', top: '38%' }, animate: { y: [0, -16, 0], rotate: [4, -4, 4], opacity: [0.8, 1, 0.8] }, transition: { duration: 9, delay: 1.8, repeat: Infinity, ease: 'easeInOut' } },
+  { size: 50, style: { right: '1%', top: '65%' }, animate: { y: [0, -13, 0], rotate: [3, -3, 3], opacity: [0.75, 0.95, 0.75] }, transition: { duration: 6, delay: 0.2, repeat: Infinity, ease: 'easeInOut' } },
+  { size: 38, style: { right: '9%', top: '22%' }, animate: { y: [0, -11, 0], rotate: [2, -2, 2], opacity: [0.65, 0.9, 0.65] }, transition: { duration: 7, delay: 2.5, repeat: Infinity, ease: 'easeInOut' } },
+  { size: 28, style: { right: '16%', top: '4%' }, animate: { y: [0, -9, 0], rotate: [2, -2, 2], opacity: [0.6, 0.8, 0.6] }, transition: { duration: 8.5, delay: 1, repeat: Infinity, ease: 'easeInOut' } },
+  { size: 22, style: { right: '20%', top: '58%' }, animate: { y: [0, -7, 0], rotate: [1, -1, 1], opacity: [0.5, 0.75, 0.5] }, transition: { duration: 7, delay: 3.5, repeat: Infinity, ease: 'easeInOut' } },
+  { size: 18, style: { left: '30%', top: '3%' }, animate: { y: [0, -6, 0], opacity: [0.4, 0.65, 0.4] }, transition: { duration: 6, delay: 0.5, repeat: Infinity, ease: 'easeInOut' } },
+  { size: 16, style: { left: '42%', top: '88%' }, animate: { y: [0, -5, 0], opacity: [0.4, 0.6, 0.4] }, transition: { duration: 7.5, delay: 2, repeat: Infinity, ease: 'easeInOut' } },
+  { size: 20, style: { right: '32%', top: '2%' }, animate: { y: [0, -6, 0], opacity: [0.45, 0.65, 0.45] }, transition: { duration: 8, delay: 1.2, repeat: Infinity, ease: 'easeInOut' } },
+  { size: 14, style: { right: '40%', top: '92%' }, animate: { y: [0, -5, 0], opacity: [0.35, 0.55, 0.35] }, transition: { duration: 6.5, delay: 0.8, repeat: Infinity, ease: 'easeInOut' } },
 ];
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -191,18 +191,18 @@ const LANTERNS: LanternConfig[] = [
 // Duration constants (must match CSS/framer values)
 const SLIDE_INTERVAL = 5000; // ms
 const SLIDE_DURATION = 1.4;  // s crossfade
-const KB_DURATION    = 6;    // s Ken Burns pan per slide
+const KB_DURATION = 6;    // s Ken Burns pan per slide
 
 export default function Hero({ translations, images, metadata }: HeroProps) {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [direction,    setDirection]    = useState<1 | -1>(1); // 1=forward, -1=backward
-  const [progress,     setProgress]     = useState(0);         // 0→1 within current interval
+  const [direction, setDirection] = useState<1 | -1>(1); // 1=forward, -1=backward
+  const [progress, setProgress] = useState(0);         // 0→1 within current interval
   const slides = images.heroSlideshow || [];
   const sectionRef = useRef<HTMLElement>(null);
   const intervalStart = useRef<number>(Date.now());
 
   const { scrollYProgress } = useScroll({ target: sectionRef, offset: ['start start', 'end start'] });
-  const bgY       = useTransform(scrollYProgress, [0, 1], ['0%', '28%']);
+  const bgY = useTransform(scrollYProgress, [0, 1], ['0%', '28%']);
   const bgOpacity = useTransform(scrollYProgress, [0, 0.8], [1, 0.4]);
 
   // Auto-advance
@@ -332,7 +332,7 @@ export default function Hero({ translations, images, metadata }: HeroProps) {
                 }}
                 transition={{
                   opacity: { duration: SLIDE_DURATION, ease: [0.4, 0, 0.2, 1] },
-                  x:       { duration: SLIDE_DURATION, ease: [0.4, 0, 0.2, 1] },
+                  x: { duration: SLIDE_DURATION, ease: [0.4, 0, 0.2, 1] },
                 }}
               >
                 {/* Ken Burns: slow zoom + drift while slide is active */}
@@ -340,7 +340,7 @@ export default function Hero({ translations, images, metadata }: HeroProps) {
                   <motion.div
                     className="absolute inset-0"
                     initial={{ scale: 1.08, x: direction > 0 ? '2%' : '-2%' }}
-                    animate={{ scale: 1.0,  x: '0%' }}
+                    animate={{ scale: 1.0, x: '0%' }}
                     transition={{ duration: KB_DURATION, ease: 'easeOut' }}
                   >
                     <Image
@@ -354,17 +354,7 @@ export default function Hero({ translations, images, metadata }: HeroProps) {
                   </motion.div>
                 )}
 
-                {/* Golden shimmer overlay on transition entry */}
-                <motion.div
-                  className="absolute inset-0 pointer-events-none"
-                  initial={{ opacity: 0.35 }}
-                  animate={{ opacity: 0 }}
-                  transition={{ duration: SLIDE_DURATION * 1.2, ease: 'easeOut' }}
-                  style={{
-                    background:
-                      'radial-gradient(ellipse at 50% 30%, rgba(255,210,100,0.45) 0%, transparent 70%)',
-                  }}
-                />
+
               </motion.div>
             </AnimatePresence>
 
@@ -377,7 +367,7 @@ export default function Hero({ translations, images, metadata }: HeroProps) {
                     onClick={() => goTo(i)}
                     className="relative overflow-hidden rounded-full transition-all duration-300"
                     style={{
-                      width:  i === currentSlide ? 22 : 7,
+                      width: i === currentSlide ? 22 : 7,
                       height: 5,
                       background: 'rgba(255,255,255,0.35)',
                     }}

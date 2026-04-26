@@ -26,15 +26,19 @@
     "/images/hero.png"
   ],
   "gallery": [
-    { "url": "/images/gallery-1.png", "caption": "" },
-    { "url": "/images/gallery-2.png", "caption": "" },
-    { "url": "/images/gallery-3.png", "caption": "" },
-    { "url": "/images/gallery_4.png", "caption": "" },
-    { "url": "/images/gallery_41.jpeg", "caption": "" },
-    { "url": "/images/gallery-4.png", "caption": "" },
-    { "url": "/images/gallery-5.png", "caption": "" },
-    { "url": "/images/gallery-6.png", "caption": "" },
-    { "url": "/images/gallery-7.png", "caption": "" }
+    { "url": "/images/ngallery_1.png", "caption": "" },
+    { "url": "/images/ngallery_2.png", "caption": "" },
+    { "url": "/images/ngallery_3.png", "caption": "" },
+    { "url": "/images/ngallery_4.png", "caption": "" },
+    { "url": "/images/ngallery_12.png", "caption": "" },
+    { "url": "/images/ngallery_10.png", "caption": "" },
+    { "url": "/images/ngallery_11.png", "caption": "" },
+    { "url": "/images/ngallery_5.png", "caption": "" },
+    { "url": "/images/ngallery_6.png", "caption": "" },
+    { "url": "/images/ngallery_7.png", "caption": "" },
+    { "url": "/images/ngallery_8.png", "caption": "" },
+    { "url": "/images/ngallery_9.png", "caption": "" }
+    
   ],
   "presence": {
     "groomParents": { "url": "/images/groom-parents.png" },
