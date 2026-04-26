@@ -64,16 +64,20 @@ export default function MusicPlayer() {
         startPlayback();
       }
     };
-    
+
     gestures.forEach((e) =>
       document.addEventListener(e, handleGesture, { passive: true })
     );
+
+    // scroll fires on window, not document
+    window.addEventListener('scroll', handleGesture, { passive: true });
 
     // 3) Optimistic: some browsers / PWA contexts allow immediate play
     startPlayback();
 
     return () => {
       window.removeEventListener('splashDone', startPlayback);
+      window.removeEventListener('scroll', handleGesture);
       gestures.forEach((e) => document.removeEventListener(e, handleGesture));
       audio.pause();
       audio.src = '';
